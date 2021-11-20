@@ -1,10 +1,12 @@
 package coding.test;
 
-import coding.test.programmers.해시.전화번호_목록.Solution;
+import coding.test.programmers.해시.완주하지_못한_선수.Solution;
 
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.solution(new String[]{"119", "97674223", "1195524421"}));
+        String[] participant = {"marina", "josipa", "nikola", "vinko", "filipa"};
+        String[] completion = {"josipa", "filipa", "marina", "nikola"};
+        System.out.println(solution.solution(participant, completion));
     }
 }
