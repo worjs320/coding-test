@@ -1,13 +1,12 @@
 package coding.test;
 
-import coding.test.programmers.해시.완주하지_못한_선수.Solution;
-import coding.test.programmers.해시.완주하지_못한_선수.Solution2;
+import coding.test.programmers.그래프.가장_먼_노드.Solution;
 
 public class Main {
     public static void main(String[] args) {
-        Solution2 solution = new Solution2();
-        String[] participant = {"marina", "josipa", "nikola", "vinko", "filipa"};
-        String[] completion = {"josipa", "filipa", "marina", "nikola"};
-        System.out.println(solution.solution(participant, completion));
+        Solution solution = new Solution();
+        int n = 6;
+        int[][] vertex = {{3, 6}, {4, 3}, {3, 2}, {1, 3}, {1, 2}, {2, 4}, {5, 2}};
+        System.out.println(solution.solution(n, vertex));
     }
 }
