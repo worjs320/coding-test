@@ -1,12 +1,14 @@
 package coding.test;
 
-import coding.test.programmers.DFS_BFS.타겟_넘버.Solution;
+import coding.test.programmers.스택_큐.기능_개발.Solution;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] number = {1, 1, 1, 1, 1};
-        int target = 3;
-        System.out.println(solution.solution(number, target));
+        int[] progresses = {95, 90, 99, 99, 80, 99};
+        int[] speeds = {1, 1, 1, 1, 1, 1};
+        System.out.println(Arrays.toString(solution.solution(progresses, speeds)));
     }
 }
