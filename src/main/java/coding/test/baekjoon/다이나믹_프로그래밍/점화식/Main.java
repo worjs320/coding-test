@@ -1,4 +1,4 @@
-package coding.test.baekjoon.수학.다이나믹_프로그래밍.점화식;
+package coding.test.baekjoon.다이나믹_프로그래밍.점화식;
 
 import java.io.BufferedReader;
 import java.io.IOException;
