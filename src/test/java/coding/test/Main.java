@@ -1,14 +1,12 @@
 package coding.test;
 
-import coding.test.programmers.스택_큐.기능_개발.Solution;
-
-import java.util.Arrays;
+import coding.test.programmers.탐욕법.체육복.Solution;
 
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] progresses = {95, 90, 99, 99, 80, 99};
-        int[] speeds = {1, 1, 1, 1, 1, 1};
-        System.out.println(Arrays.toString(solution.solution(progresses, speeds)));
+        int[] lost = {2, 4};
+        int[] reserve = {1, 3, 5};
+        System.out.println(solution.solution(5, lost, reserve));
     }
 }
