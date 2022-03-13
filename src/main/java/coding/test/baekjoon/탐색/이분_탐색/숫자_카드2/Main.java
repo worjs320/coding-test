@@ -1,0 +1,59 @@
+package coding.test.baekjoon.탐색.이분_탐색.숫자_카드2;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Main {
+
+    static int[] nList, nCountList;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+
+        int N = Integer.parseInt(br.readLine()); // 상근이가 가지고 있는 숫자 카드 개수
+        nList = new int[N];
+        nCountList = new int[20000001];
+
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < N; i++) {
+            int n = Integer.parseInt(st.nextToken());
+            nList[i] = n;
+            nCountList[10000000 + n]++;
+        }
+
+        Arrays.sort(nList);
+
+        int M = Integer.parseInt(br.readLine()); // 상근이가 가지고 있는지 확인해야할 숫자카드 개수
+
+        st = new StringTokenizer(br.readLine());
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < M; i++) {
+            sb.append(findCard(Integer.parseInt(st.nextToken()))).append(" ");
+        }
+
+        System.out.println(sb);
+    }
+
+    public static int findCard(int num) {
+        int start = 0;
+        int end = nList.length - 1;
+
+        while (start <= end) {
+            int mid = (start + end) / 2;
+
+            if (nList[mid] == num) {
+                return nCountList[10000000 + num];
+            } else if (nList[mid] > num) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+
+        return 0;
+    }
+}
